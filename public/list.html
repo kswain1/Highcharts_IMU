@@ -1,0 +1,41 @@
+<div class = "row">
+  <div class="col-md-6">
+    <h2>
+      Chance Swing Data: Swing For Fences!
+    </h2>
+  </div>
+  <div class="col-md-3">
+  </div>
+  <div class="col-md-2">
+    <a style="margin-top:20px" class="btn btn-default" href="#/new/contact">New</a>
+  </div>
+  <div class="col-md-1">
+  </div>
+</div>
+<div class="container">
+  <table class="table table-hover">
+    <tr>
+        <th>Swing Number</th>
+        <th>Date</th>
+        <th>Swing Speed</th> 
+        <!-- <th>Hip Speed</th> -->
+    </tr>
+    <tbody>
+      <tr ng-repeat="contact in contacts | orderBy:'lastName'" style="cursor:pointer">
+          <td>
+            <a href="">{{$index + 1}}. {{contact.firstname}}</a>
+          </td>
+  	      <td>
+            <a> {{contact.createDate}}</a>
+          </td>
+          <td>
+            <a>{{contact.swing_speed_mag}}</a>
+          </td>
+          <!-- <td>
+            <a>{{contact.hip_speed}}</a>
+          </td> -->
+      </tr>
+      
+    </tbody>
+  </table>
+</div>
